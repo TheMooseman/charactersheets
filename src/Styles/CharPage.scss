@@ -1,0 +1,100 @@
+.charPage {
+    height: 90%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 15% 1fr;
+
+    font-size: .7rem;
+
+    & textarea {
+        border: solid black 1px;
+        resize: none;
+    }
+
+    & ul {
+        padding: 0;
+        align-items: center;
+
+        & div {
+            display: flex;
+            align-items: center;
+        }
+        
+    }
+}
+
+
+.charInfo {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.charAttributes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.charStats {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    & .charAttr {
+        
+    }
+
+    & .charStSk {
+        display: block;
+        & .listCheckbox {
+            height: auto;
+            & .listText {
+                height: 1.5ch;
+                width: 2ch;
+            }
+        }
+    }
+    
+    & textarea {
+        text-align: center;
+        width: 30%;
+        height: 5%;
+    }
+
+
+}
+
+.charComInfo {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.charPersInfo {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.charPas {
+    display: flex;
+    justify-content: flex-end;
+
+    & textarea {
+        height: 2ch;
+        width: 2ch;
+    }
+}
+
+.charLang {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
