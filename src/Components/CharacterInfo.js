@@ -1,25 +1,31 @@
 import React from 'react'
+import LabelText from './LabelText'
 
 function CharacterInfo() {
   return (
     <div className='charInfo'>
+      <div className='charNameDiv'>
         <label> Name </label>
         <textarea className='charName' />
+      </div>
+
         <div className='charData'> 
-            <label> Class/Level </label>
-            <textarea className='charInfo' />
+          <div className='data1'>
+            <LabelText name='Class/Level'/>
 
-            <label> Background </label>
-            <textarea className='charInfo'/>
+            <LabelText name='Background'/>
 
-            <label> Race </label>
-            <textarea className='charInfo' />
+            <LabelText name='Player Name'/>
+          </div>
 
-            <label> Alignment </label>
-            <textarea className='charInfo' />
+          <div className='data2'>
+          <LabelText name='Race'/>
 
-            <label> Experience </label>
-            <textarea className='charInfo' />
+          <LabelText name='Alignment' />
+
+          <LabelText name='Experience'/>
+          </div>
+
         </div>
     </div>
   )

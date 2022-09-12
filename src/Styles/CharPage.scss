@@ -1,14 +1,21 @@
 .charPage {
-    height: 90%;
-    width: 100%;
+    border: solid white 1px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    align-self: center;
+    height: 100%;
+    width: 96%;
+    margin-top: -2%;
+    margin-left: 2%;
+    margin-right: 2%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 15% 1fr;
 
+    transform: scale(.95);
     font-size: .7rem;
 
     & textarea {
-        border: solid black 1px;
         resize: none;
     }
 
@@ -30,30 +37,96 @@
     grid-column-end: -1;
     grid-row-start: 1;
     grid-row-end: 2;
+
+    border: solid white 1px;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: row;
+
+    & .charNameDiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 35%;
+        height: 100%;
+
+        align-items: center;
+        & textarea {
+            margin-left: .2rem;
+            margin-right: .2rem;
+            width: 90%;
+            height: 20%;
+        }
+    }
+
+    & .charData {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 65%;
+        height: 100%;
+
+        & .data1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+        }
+
+        & .data2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+        }
+
+        & textarea {
+            width: 90%;
+            height: 50%;
+        }
+    }
+
+    & textarea {
+        width: 100%;
+        height: 15%;
+    }
 }
 
 .charAttributes {
+    height: 85%;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+
 }
 
 .charStats {
     width: 100%;
+
+    
+
     display: flex;
     flex-direction: column;
 
     & .charAttr {
-        
+        border: solid white 1px;
+        border-radius: 8px;
     }
 
     & .charStSk {
+        border: solid white 1px;
+        border-radius: 8px;
+        
         display: block;
         & .listCheckbox {
             height: auto;
             & .listText {
-                height: 1.5ch;
+                height: 1.1ch;
                 width: 2ch;
             }
         }
@@ -61,8 +134,7 @@
     
     & textarea {
         text-align: center;
-        width: 30%;
-        height: 5%;
+        width: 50%;
     }
 
 
@@ -72,7 +144,13 @@
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-end: -1;
+
+    border: solid white 1px;
+    border-radius: 6px;
+    height: 99.5%;
+    display: flex;
+    flex-direction: column;
 }
 
 .charPersInfo {
@@ -80,21 +158,131 @@
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
+    height: 99.5%;
+    border: solid white 1px;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+
+    & textarea {
+        margin-left: 5.4%;
+        width: 90%;
+        height: 100%;
+    }
 }
 
 .charPas {
+
+    border: solid white 1px;
+    border-radius: 8px;
+
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    align-items: center;
+    
 
     & textarea {
-        height: 2ch;
-        width: 2ch;
+        
+        margin-left: 4%;
+        height: 3ch;
+        width: 4ch;
     }
 }
 
 .charLang {
+    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     & textarea {
+        width: 90%;
+        height: 100%;
+     }
+}
+
+.acInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    & textarea {
+        width: 10%;
+        height: 100%;
+    }
+
+    & .acIn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & textarea {
+            width: 75%;
+            height: 100%;
+        }
+    }
+
+    
+}
+
+.charHP {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & textarea {
+        width: 75%;
+        height: 100%;
+    }
+}
+
+.charHitDice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & textarea {
+        width: 75%;
+        height: 100%;
+    }
+}
+
+.charSaves {
+    border: solid white 1px;
+    border-radius: 8px;
+    padding: .2rem;
+    width: 70%;
+    align-self: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.saveResults {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & ol {
+        padding: 0;
+    }
+}
+
+.charAttacks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & textarea {
+        width: 75%;
+        height: 12rem;
+    }
+}
+
+.charEquip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & textarea {
+        width: 75%;
+        height: 11.5rem;
+    }
+}
